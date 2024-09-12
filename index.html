@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Media queries o image source</title>
+
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #head_content{
+            width: 100%;
+            height: 80px;
+            background-color: red;
+        }
+
+        #logobox img{
+            display: block;
+            width: 300px;
+            height: 80px;
+        }
+
+        /*---> Adaptación para los celulares <---*/
+        @media screen and (min-width: 360px) and (max-width: 411px) {
+
+            #logobox img{
+                display: block;
+                width: 50px !important;
+                height: 50px;
+                background-color: #323232;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <header id="head_content">
+        <span id="logobox">
+            <picture>
+                <source srcset="2.png" media="(min-width: 1024px)">
+                <source srcset="2.png" media="(min-width: 768px)">
+                <source srcset="1.png" media="(min-width: 377px)">
+                <img src="1.png" alt="imagen principal">
+            </picture>
+        </span>
+
+        <address class="datebox">
+            <div class="fecha">
+            
+            </div>
+        </address>
+    </header>
+</body>
+</html>
